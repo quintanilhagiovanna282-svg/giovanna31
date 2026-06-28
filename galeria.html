@@ -10,11 +10,12 @@
       text-align: center;
       margin: 30px 0;
       color: #2d5a27;
+      font-size: 2.2rem;
     }
     .galeria {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 3 fotos por linha no PC */
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr); /* 3 por linha */
+      gap: 25px;
       padding: 20px;
       max-width: 1200px;
       margin: 0 auto;
@@ -22,20 +23,45 @@
     .item {
       text-align: center;
       background: white;
-      padding: 10px;
+      padding: 12px;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      
+      /* EFEITO SUBINDO DE BAIXO PRA CIMA */
+      opacity: 0;
+      transform: translateY(40px);
+      animation: subir 0.7s ease forwards;
     }
     .item img {
       width: 100%;
-      height: 200px; /* Todas com mesma altura */
-      object-fit: cover; /* Não distorce a foto */
+      height: 180px;
+      object-fit: cover;
       border-radius: 8px;
     }
     .item p {
-      margin-top: 8px;
+      margin-top: 10px;
       font-weight: bold;
-      color: #333;
+      color: #2d5a27;
+    }
+    /* Atraso pra cada foto aparecer depois da outra */
+    .item:nth-child(1) { animation-delay: 0.1s; }
+    .item:nth-child(2) { animation-delay: 0.2s; }
+    .item:nth-child(3) { animation-delay: 0.3s; }
+    .item:nth-child(4) { animation-delay: 0.4s; }
+    .item:nth-child(5) { animation-delay: 0.5s; }
+    .item:nth-child(6) { animation-delay: 0.6s; }
+    .item:nth-child(7) { animation-delay: 0.7s; }
+    .item:nth-child(8) { animation-delay: 0.8s; }
+    .item:nth-child(9) { animation-delay: 0.9s; }
+    .item:nth-child(10) { animation-delay: 1.0s; }
+    .item:nth-child(11) { animation-delay: 1.1s; }
+    .item:nth-child(12) { animation-delay: 1.2s; }
+
+    @keyframes subir {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -55,53 +81,28 @@
   </header>
   
   <main>
-    <h2>🌽 Galeria da Minha Roça 🍓</h2>
+    <h2>🌿 Cantinho Sustentável 🌿</h2>
     <div class="galeria">
       
-      <div class="item">
-        <img src="COLE_O_LINK_DO_TOMATE_AQUI" alt="Tomate">
-        <p>Tomate Vermelhinho</p>
-      </div>
+      <!-- LINHA 1 - Milho de um lado -->
+      <div class="item"><img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400" alt="Milho"><p>Milho da Roça</p></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1597362925126-2c1d9f4d9b6a?w=400" alt="Tomate"><p>Tomate Vermelhinho</p></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400" alt="Cenoura"><p>Cenoura Fresca</p></div>
       
-      <div class="item">
-        <img src="COLE_O_LINK_DO_MILHO_AQUI" alt="Milho">
-        <p>Milho da Roça</p>
-      </div>
+      <!-- LINHA 2 -->
+      <div class="item"><img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=400" alt="Maxixe"><p>Maxixe Verde</p></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=400" alt="Pimentão"><p>Pimentão Colorido</p></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1596363505729-419b8d4b45e9?w=400" alt="Uva"><p>Uva Roxa</p></div>
       
-      <div class="item">
-        <img src="COLE_O_LINK_DA_CENOURA_AQUI" alt="Cenoura">
-        <p>Cenoura Fresca</p>
-      </div>
-      
-      <div class="item">
-        <img src="COLE_O_LINK_DO_MAXIXE_AQUI" alt="Maxixe">
-        <p>Maxixe Verde</p>
-      </div>
-      
-      <div class="item">
-        <img src="COLE_O_LINK_DO_MORANGO_AQUI" alt="Morango">
-        <p>Morango Doce</p>
-      </div>
-      
-      <div class="item">
-        <img src="COLE_O_LINK_DA_ALFACE_AQUI" alt="Alface">
-        <p>Alface Crocante</p>
-      </div>
+      <!-- LINHA 3 - Morango do outro lado -->
+      <div class="item"><img src="https://images.unsplash.com/photo-1556817411-31ae72fa3ea6?w=400" alt="Alface"><p>Alface Crocante</p></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f1?w=400" alt="Morango"><p>Morango Doce</p></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1599586120429-482d82161d9c?w=400" alt="Abóbora"><p>Abóbora da Horta</p></div>
 
-      <div class="item">
-        <img src="COLE_O_LINK_DA_UVA_AQUI" alt="Uva">
-        <p>Uva Roxa</p>
-      </div>
-      
-      <div class="item">
-        <img src="COLE_O_LINK_DO_PIMENTAO_AQUI" alt="Pimentão">
-        <p>Pimentão Colorido</p>
-      </div>
-      
-      <div class="item">
-        <img src="COLE_O_LINK_DA_ABOBORA_AQUI" alt="Abóbora">
-        <p>Abóbora da Horta</p>
-      </div>
+      <!-- LINHA 4 - 3 FOTOS NOVAS -->
+      <div class="item"><img src="https://images.unsplash.com/photo-1506808547685-12ee7c26d0ab?w=400" alt="Batata"><p>Batata</p></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400" alt="Feijão"><p>Feijão</p></div>
+      <div class="item"><img src="https://images.unsplash.com/photo-1611273426852-22ddebba304b?w=400" alt="Mandioca"><p>Mandioca</p></div>
 
     </div>
   </main>
