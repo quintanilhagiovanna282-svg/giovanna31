@@ -6,13 +6,32 @@
   <title>Agrofuturo - Projeto Agrinho</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Imagem menor pra caber sua logo depois */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 30px 20px;
+      flex-wrap: wrap;
+    }
     .foto-campo {
-      width: 90%;
-      max-width: 700px;
-      display: block;
-      margin: 20px auto;
+      width: 65%;
+      min-width: 300px;
       border-radius: 12px;
+      animation: subir 1s ease-out;
+    }
+    .espaco-logo {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      color: #ccc;
+    }
+    .texto {
+      width: 100%;
+      padding: 0 20px;
+    }
+    @keyframes subir {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -30,16 +49,24 @@
       <a href="comprar.html">Comprar</a>
     </nav>
   </header>
+  
   <main>
-    <!-- Imagem menor: 90% da largura -->
-    <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura" class="foto-campo">
-    
-    <!-- TÍTULO -->
-    <h2>Agrofuturo</h2>
-    
-    <!-- TEXTO TEMA: SUSTENTABILIDADE -->
-    <p>Acredito que produzir com respeito ao meio ambiente é o futuro. O Agrofuturo conecta o campo e a cidade levando comida saudável, plantada com cuidado e sem desperdício, direto pra sua mesa.</p>
+    <div class="hero">
+      <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura" class="foto-campo">
+      <div class="espaco-logo">
+        <p>Sua logo aqui depois</p>
+      </div>
+    </div>
+
+    <div class="texto">
+      <!-- TÍTULO NOVO 👇 -->
+      <h2>Agrofuturo, Alimentando o Futuro</h2>
+      
+      <!-- TEXTO NOVO 👇 -->
+      <p>Produzir com respeito à terra é plantar o amanhã. O Agrofuturo une tecnologia e natureza para levar alimentos mais saudáveis, sem desperdício e direto do produtor pra sua casa.</p>
+    </div>
   </main>
+  
   <footer>
     <p>© 2026 Agrofuturo - Projeto Agrinho</p>
   </footer>
