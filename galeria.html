@@ -2,8 +2,21 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeria - Agrofuturo</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,7 +34,15 @@
   </header>
   <main>
     <h2>Galeria</h2>
-    <p>Aqui vão as fotos do projeto.</p>
+    <p>Aqui estão alguns produtos direto do campo:</p>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" alt="Verduras frescas">
+      <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9" alt="Cesta de frutas">
+      <img src="https://images.unsplash.com/photo-1464222708728-f4db3a47db1e" alt="Plantação">
+    </div>
   </main>
+  <footer>
+    <p>© 2026 Agrofuturo - Projeto Agrinho</p>
+  </footer>
 </body>
 </html>
