@@ -9,35 +9,44 @@
     .hero {
       display: flex;
       align-items: flex-start;
-      gap: 30px;
-      padding: 30px 20px;
+      justify-content: center; /* Centraliza tudo no meio */
+      gap: 40px; /* Espaço dos "dois dedos" pra logo */
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .foto-campo {
-      width: 60%;
+      width: 55%; /* Diminui da 60% pra 55% = menos que um dedinho a mais */
       border-radius: 12px;
       animation: subir 1s ease-out;
     }
     .espaco-logo {
-      flex: 1;
+      width: 30%; /* Espaço dos dois dedos pro lado da logo */
       text-align: center;
       color: #888;
       font-size: 14px;
       padding-top: 20px;
     }
     .texto {
-      padding: 20px;
-      max-width: 900px;
-      text-align: center;
+      text-align: center; /* Texto no meio da tela */
+      max-width: 800px;
+      margin: 40px auto 0 auto; /* Joga pro meio, não embaixo colado */
+      padding: 0 20px;
     }
     .texto h2 {
-      color: #2e7d32; /* Verde */
-      font-size: 32px; /* Maior */
-      margin-bottom: 15px;
+      color: #2e7d32;
+      font-size: 36px; /* Aumentei só um pouquinho de 32 pra 36 */
+      margin-bottom: 20px;
+    }
+    .texto p {
+      font-size: 18px; /* Letra um pouco maior */
+      line-height: 1.7; /* Mais cheio, mais respirado */
+      color: #333;
     }
     .linha-verde {
       width: 100%;
       height: 8px;
-      background: #a5d6a7; /* Verde clarinha */
+      background: #a5d6a7;
       margin-top: 40px;
     }
     footer {
@@ -73,20 +82,24 @@
     <div class="hero">
       <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura" class="foto-campo">
       <div class="espaco-logo">
-        <p>Espaço pra sua logo aqui</p>
+        <p>Espaço pra sua logo aqui<br>~2 dedos~</p>
       </div>
     </div>
 
     <div class="texto">
-      <h2>Agrofuturo: Alimentando o Futuro</h2> <!-- Título 4 -->
-      <p>Acredito que produzir com respeito ao meio ambiente é o futuro. O Agrofuturo leva comida saudável direto do campo.</p> <!-- Texto Tema 3 -->
+      <h2>Agrofuturo: Alimentando o Futuro</h2>
+      <p>
+        Acredito que produzir com respeito ao meio ambiente é o futuro. 
+        O Agrofuturo une tecnologia e natureza para conectar quem planta com quem consome, 
+        levando alimentos mais saudáveis, mais justos e mais frescos direto do campo para a sua casa.
+      </p> <!-- Texto maior e mais cheio igual você pediu -->
     </div>
 
     <div class="linha-verde"></div>
   </main>
   
   <footer>
-    <p>© 2026 Agrofuturo - Feito por Giovanna | Projeto Agrinho</p> <!-- Rodapé com seu nome -->
+    <p>© 2026 Agrofuturo - Feito por Giovanna | Projeto Agrinho</p>
   </footer>
 </body>
 </html>
