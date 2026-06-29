@@ -5,127 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agrofuturo - Projeto Agrinho</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .hero {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: 30px; /* Espaço normal, não infinito */
-      padding: 40px 20px 20px 20px;
-      max-width: 1100px; /* Diminui o max-width pra não esticar infinito */
-      margin: 0 auto;
-    }
-    .foto-campo {
-      width: 62%; /* DIMINUI: de 70% pra 62% = "só um pouquinho" até o O */
-      border-radius: 12px;
-      animation: subir 1s ease-out;
-    }
-    .espaco-logo {
-      width: 25%; /* Espaço normal do lado */
-      text-align: center;
-      color: #888;
-      font-size: 14px;
-      padding-top: 20px;
-    }
-    .texto {
-      text-align: center;
-      max-width: 800px;
-      margin: 20px auto 0 auto; /* SUBIU: de 80px pra 20px = "pouquinho pra cima" */
-      padding: 0 20px;
-    }
-    .texto h2 {
-      color: #2e7d32;
-      font-size: 36px;
-      margin-bottom: 15px; /* Menos espaço abaixo do título */
-    }
-    .texto p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #333;
-    }
-    .linha-verde {
-      width: 100%;
-      height: 8px;
-      background: #a5d6a7;
-      margin-top: 40px;
-    }
-    footer {
-      background: #a5d6a7;
-      text-align: center;
-      padding: 10px;
-      color: #1b5e20;
-      font-weight: bold;
-    }
-    @keyframes subir {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    header .logo { display: flex; align-items: center; gap: 10px; }
-    header .logo h1::after { content: " 🌱"; }
-  </style>
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <h1>Agrofuturo</h1>
-    </div>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="galeria.html">Galeria</a>
-      <a href="como-funciona.html">Como Funciona</a>
-      <a href="beneficios.html">Benefícios</a>
-      <a href="compra.html">Compra</a>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+
+  <!-- CABEÇALHO VERDE -->
+  <header style="background: #2e7d32; padding: 15px 30px;">
+    <h1 style="color: white; margin: 0; font-size: 28px; display: inline-block;">Agrofuturo 🌱</h1>
+    <nav style="float: right; margin-top: 8px;">
+      <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Início</a>
+      <a href="galeria.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Galeria</a>
+      <a href="como-funciona.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Como Funciona</a>
+      <a href="beneficios.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Benefícios</a>
+      <a href="compra.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Compra</a>
     </nav>
   </header>
-  
-  <main>
-    <div class="hero">
-      <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura" class="foto-campo">
-         <div class="container-inicio" style="max-width: 900px; margin: 40px auto; padding: 0 20px; text-align: center;">
-      
-      <!-- 1. SUBTÍTULO VERDE NO MEIO -->
-      <h3 style="color: #2e7d32; font-size: 26px; margin-top: 40px; margin-bottom: 15px;">
-        Bem-vindo ao Agrofuturo
-      </h3>
-      
-      <!-- 2. EXPLICAÇÃO EMBAIXO -->
-      <p style="font-size: 18px; color: #333; line-height: 1.8; margin-bottom: 25px;">
-        A gente acredita que produzir com respeito ao meio ambiente e ao futuro é o caminho. 
-        O Agrofuturo une tecnologia e natureza pra conectar quem planta com quem consome, 
-        levando alimentos mais saudáveis, mais justos e mais frescos direto do campo para a sua casa.
-      </p>
 
-      <!-- 3. NOVO TÍTULO + EXPLICAÇÃO -->
-      <h3 style="color: #2e7d32; font-size: 26px; margin-top: 40px; margin-bottom: 15px;">
-        Por que você deve escolher o Agrofuturo?
-      </h3>
-      <p style="font-size: 18px; color: #333; line-height: 1.8; margin-bottom: 25px;">
-        Porque aqui você come comida de verdade, sem veneno. Porque você ajuda o agricultor a ganhar de forma justa. 
-        E porque a gente usa a tecnologia pra cuidar melhor da terra e entregar tudo mais rápido pra você. 
-        É qualidade, confiança e sabor do campo na sua mesa todo dia 💚
-      </p>
-    </div>
+  <!-- CONTEÚDO PRINCIPAL - TUDO CENTRALIZADO -->
+  <main style="max-width: 900px; margin: 0 auto; padding: 40px 20px; text-align: center;">
+    
+    <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura" style="width: 100%; border-radius: 12px; margin-bottom: 30px;">
+    
+    <h2 style="color: #2e7d32; font-size: 36px; margin-bottom: 10px;">
+      Agrofuturo: Alimentando o Futuro
+    </h2>
 
-    <!-- 4. NEGOCINHO VERDE PRA FINALIZAR -->
-    <div class="linha-verde" style="width: 100%; height: 8px; background: #a5d6a7; margin-top: 40px;"></div> <div class="espaco-logo">
-        <p>Espaço pra logo</p>
-      </div>
-    </div>
+    <h3 style="color: #2e7d32; font-size: 26px; margin-top: 40px; margin-bottom: 15px;">
+      Bem-vindo ao Agrofuturo
+    </h3>
+    
+    <p style="font-size: 18px; color: #333; line-height: 1.8; margin-bottom: 40px;">
+      A gente acredita que produzir com respeito ao meio ambiente e ao futuro é o caminho. 
+      O Agrofuturo une tecnologia e natureza pra conectar quem planta com quem consome, 
+      levando alimentos mais saudáveis, mais justos e mais frescos direto do campo para a sua casa.
+    </p>
 
-    <div class="texto">
-      <h2>Agrofuturo: Alimentando o Futuro</h2> <!-- Subiu junto -->
-      <p>
-        Acredito que produzir com respeito ao meio ambiente é o futuro. 
-        O Agrofuturo une tecnologia e natureza para conectar quem planta com quem consome, 
-        levando alimentos mais saudáveis, mais justos e mais frescos direto do campo para a sua casa.
-      </p>
-    </div>
-
-    <div class="linha-verde"></div>
+    <h3 style="color: #2e7d32; font-size: 26px; margin-top: 40px; margin-bottom: 15px;">
+      Por que você deve escolher o Agrofuturo?
+    </h3>
+    <p style="font-size: 18px; color: #333; line-height: 1.8; margin-bottom: 40px;">
+      Porque aqui você come comida de verdade, sem veneno. Porque você ajuda o agricultor a ganhar de forma justa. 
+      E porque a gente usa a tecnologia pra cuidar melhor da terra e entregar tudo mais rápido pra você. 
+      É qualidade, confiança e sabor do campo na sua mesa todo dia 💚
+    </p>
   </main>
+
+  <!-- BARRINHA VERDE PRA FINALIZAR -->
+  <div style="width: 100%; height: 8px; background: #a5d6a7;"></div>
   
-  <footer>
+  <!-- RODAPÉ -->
+  <footer style="background: #a5d6a7; text-align: center; padding: 10px; color: #1b5e20; font-weight: bold;">
     <p>© 2026 Agrofuturo - Feito por Giovanna | Projeto Agrinho</p>
   </footer>
+
 </body>
 </html>
