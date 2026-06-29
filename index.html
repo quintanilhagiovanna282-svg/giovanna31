@@ -5,30 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agrofuturo - Projeto Agrinho</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 30px 20px;
+      flex-wrap: wrap;
+    }
+    .foto-campo {
+      width: 65%;
+      min-width: 300px;
+      border-radius: 12px;
+      animation: subir 1s ease-out;
+    }
+    .espaco-logo {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      color: #ccc;
+      font-size: 14px;
+    }
+    .texto {
+      width: 100%;
+      padding: 0 20px;
+    }
+    @keyframes subir {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header .logo { display: flex; align-items: center; gap: 10px; }
+  </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png" alt="Plantinha" width="40"> <!-- Plantinha ANTES do H1 -->
-      <h1>Agrofuturo</h1> 
+      <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png" alt="Plantinha" width="40">
+      <h1>Agrofuturo</h1>
     </div>
     <nav>
       <a href="index.html">Início</a>
       <a href="galeria.html">Galeria</a>
       <a href="como-funciona.html">Como Funciona</a>
       <a href="beneficios.html">Benefícios</a>
-      <a href="compra.html">Compra</a> <!-- SEM R -->
+      <a href="compra.html">Compra</a>
     </nav>
   </header>
   
   <main>
-    <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo" style="width:65%; border-radius:12px; display:block; margin:30px auto;">
-    <div class="texto" style="padding:0 20px;">
+    <div class="hero">
+      <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura" class="foto-campo">
+      <div class="espaco-logo">
+        <p>Sua logo aqui depois</p>
+      </div>
+    </div>
+
+    <div class="texto">
       <h2>Agrofuturo</h2>
       <p>Acredito que produzir com respeito ao meio ambiente é o futuro. O Agrofuturo conecta o campo e a cidade levando comida saudável, plantada com cuidado e sem desperdício, direto pra sua mesa.</p>
     </div>
   </main>
   
-  <footer><p>© 2026 Agrofuturo - Projeto Agrinho</p></footer>
+  <footer>
+    <p>© 2026 Agrofuturo - Projeto Agrinho</p>
+  </footer>
 </body>
 </html>
