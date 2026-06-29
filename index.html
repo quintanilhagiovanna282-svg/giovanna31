@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agrofuturo - Projeto Agrinho</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes descer {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animar-descer {
+      animation: descer 1s ease-out;
+    }
+</style>
 </head>
 <body style="margin: 0; font-family: Arial, sans-serif;">
 
@@ -23,7 +32,7 @@
   <!-- CONTEÚDO PRINCIPAL - TUDO CENTRALIZADO -->
   <main style="max-width: 900px; margin: 0 auto; padding: 40px 20px; text-align: center;">
     
-    <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura" style="width: 100%; border-radius: 12px; margin-bottom: 30px;">
+    <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura"class="animar-descer" style="width: 100%; border-radius: 12px; margin-bottom: 30px;">
     
     <h2 style="color: #2e7d32; font-size: 36px; margin-bottom: 10px;">
       Agrofuturo: Alimentando o Futuro
