@@ -1,31 +1,43 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; background-color: #f9fff9; color: #333; }
-header { background-color: #2e7d32; color: white; padding: 15px 30px; }
-.logo { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.logo h1 { font-size: 28px; color: white; }
-nav a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; }
-nav a:hover { color: #c8e6c9; }
-main { padding: 40px 30px; text-align: center; }
-h2 { color: #1b5e20; font-size: 32px; }
-.banner { max-width: 800px; width: 90%; border-radius: 12px; margin: 20px 0; }
-footer { background-color: #2e7d32; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-/* Título da galeria com milho e morango */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+header {
+  background: #2d6a2d;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* TÍTULO COM MILHO E MORANGO NO MEIO */
 .titulo-galeria {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  margin: 30px 0;
+  margin: 30px 0 10px 0;
+}
+.titulo-galeria h2 {
   font-size: 2em;
+  color: #2d6a2d;
+  margin: 0;
 }
 .titulo-galeria span {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
-/* Grid de cards bonitinhos */
+/* GRID COM CARDS PEQUENINHOS */
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
@@ -35,26 +47,27 @@ footer { background-color: #2e7d32; color: white; text-align: center; padding: 2
 .card {
   background: white;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 15px;
+  text-align: center;
   opacity: 0;
-  transform: translateY(20px);
-  animation: aparecer 0.6s forwards;
+  transform: translateY(30px);
+  animation: subir 0.6s forwards; /* ANIMAÇÃO */
 }
 .card img {
   width: 100%;
-  height: 150px;
+  height: 160px;
   object-fit: cover;
   border-radius: 10px;
 }
 .card p {
   margin-top: 10px;
   font-weight: bold;
+  color: #333;
 }
 
-/* Animação de entrada */
-@keyframes aparecer {
+/* ANIMAÇÃO APARECENDO DE BAIXO PRA CIMA */
+@keyframes subir {
   to {
     opacity: 1;
     transform: translateY(0);
@@ -63,4 +76,104 @@ footer { background-color: #2e7d32; color: white; text-align: center; padding: 2
 .card:nth-child(1) { animation-delay: 0.1s; }
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
-/* continua assim... */
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:nth-child(9) { animation-delay: 0.9s; }
+/* ===== PARTE 1: GERAL E CABEÇALHO ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+header {
+  background: #2d6a2d;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== PARTE 2: GALERIA ===== */
+
+/* TÍTULO COM MILHO E MORANGO NO MEIO */
+.titulo-galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0 10px 0;
+}
+.titulo-galeria h2 {
+  font-size: 2em;
+  color: #2d6a2d;
+  margin: 0;
+}
+.titulo-galeria span {
+  font-size: 2.5em;
+}
+
+/* GRID COM CARDS PEQUENINHOS */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: subir 0.6s forwards; /* ANIMAÇÃO */
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ANIMAÇÃO APARECENDO DE BAIXO PRA CIMA */
+@keyframes subir {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:nth-child(9) { animation-delay: 0.9s; }
