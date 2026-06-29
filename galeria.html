@@ -2,105 +2,25 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeria - Agrofuturo</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    h2 {
-      text-align: center;
-      margin: 30px 0;
-      color: #2d5a27;
-      font-size: 2.2rem;
-    }
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .item {
-      text-align: center;
-      background: white;
-      padding: 12px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      opacity: 0;
-      transform: translateY(40px);
-      animation: subir 0.7s ease forwards;
-    }
-    .item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .item p {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #2d5a27;
-      font-size: 1.1rem;
-    }
-    .item:nth-child(1) { animation-delay: 0.1s; }
-    .item:nth-child(2) { animation-delay: 0.2s; }
-    .item:nth-child(3) { animation-delay: 0.3s; }
-    .item:nth-child(4) { animation-delay: 0.4s; }
-    .item:nth-child(5) { animation-delay: 0.5s; }
-    .item:nth-child(6) { animation-delay: 0.6s; }
-    .item:nth-child(7) { animation-delay: 0.7s; }
-    .item:nth-child(8) { animation-delay: 0.8s; }
-    .item:nth-child(9) { animation-delay: 0.9s; }
-    .item:nth-child(10) { animation-delay: 1.0s; }
-    .item:nth-child(11) { animation-delay: 1.1s; }
-    .item:nth-child(12) { animation-delay: 1.2s; }
-    @keyframes subir { to { opacity: 1; transform: translateY(0); } }
-  </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png" alt="Plantinha" width="40">
-      <h1>Agrofuturo</h1>
-    </div>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="galeria.html">Galeria</a>
-      <a href="como-funciona.html">Como Funciona</a>
-      <a href="beneficios.html">Benefícios</a>
-      <a href="comprar.html">Comprar</a>
-    </nav>
+    <h1>Galeria de Hortaliças</h1>
+    <a href="index.html">Voltar</a>
   </header>
-  
-  <main>
-    <h2>🌿 Cantinho Sustentável 🌿</h2>
-    <div class="galeria">
-      
-      <!-- LINHA 1 -->
-      <div class="item"><img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400" alt="Milho"><p>Milho</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1597362925126-2c1d9f4d9b6a?w=400" alt="Tomate"><p>Tomate</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400" alt="Cenoura"><p>Cenoura</p></div>
-      
-      <!-- LINHA 2 -->
-      <div class="item"><img src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?w=400" alt="Tangerina"><p>Tangerina</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=400" alt="Pimentão"><p>Pimentão Colorido</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1596363505729-419b8d4b45e9?w=400" alt="Uva"><p>Uva</p></div>
-      
-      <!-- LINHA 3 -->
-      <div class="item"><img src="https://images.unsplash.com/photo-1556817411-31ae72fa3ea6?w=400" alt="Alface"><p>Alface</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f1?w=400" alt="Morango"><p>Morango</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1599586120429-482d82161d9c?w=400" alt="Abóbora"><p>Abóbora</p></div>
 
-      <!-- LINHA 4 -->
-      <div class="item"><img src="https://images.unsplash.com/photo-1506808547685-12ee7c26d0ab?w=400" alt="Batata"><p>Batata</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1611273426852-22ddebba304b?w=400" alt="Mandioca"><p>Mandioca</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1612528443702-f67494784d3b?w=400" alt="Feijão"><p>Feijão</p></div>
-
-    </div>
+  <main class="galeria">
+    <img src="imagens/milho.jpg" alt="Milho">
+    <img src="imagens/abobora.jpg" alt="Abóbora">
+    <img src="imagens/alface.jpg" alt="Alface">
+    <img src="imagens/batata.jpg" alt="Batata">
+    <img src="imagens/cenoura.jpg" alt="Cenoura">
+    <img src="imagens/feijao.jpg" alt="Feijão">
+    <img src="imagens/morango.jpg" alt="Morango">
+    <img src="imagens/pimentao.jpg" alt="Pimentão">
+    <img src="imagens/tangerina.jpg" alt="Tangerina">
   </main>
-  
-  <footer>
-    <p>© 2026 Agrofuturo - Projeto Agrinho</p>
-  </footer>
 </body>
 </html>
