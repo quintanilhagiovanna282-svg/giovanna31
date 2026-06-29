@@ -5,11 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compra - Agrofuturo</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body { margin: 0; }
+    .linha-verde-topo {
+      width: 100%;
+      height: 8px;
+      background: #a5d6a7;
+      margin: 0;
+    }
+    .compra-container {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .compra-container h2 {
+      color: #2e7d32;
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .compra-container > p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: #333;
+      line-height: 1.7;
+    }
+    .caixa-whatsapp {
+      background: #f1f8e9;
+      padding: 40px 30px;
+      border-radius: 16px;
+      border: 3px solid #a5d6a7;
+    }
+    .caixa-whatsapp span {
+      font-size: 70px;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 18px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: transform 0.2s ease;
+    }
+    .btn-whatsapp:hover {
+      transform: scale(1.05);
+      background: #1ebe5b;
+    }
+    header .logo { display: flex; align-items: center; gap: 10px; }
+    header .logo h1::after { content: " 🌱"; }
+    .linha-verde {
+      width: 100%;
+      height: 8px;
+      background: #a5d6a7;
+      margin-top: 40px;
+    }
+    footer {
+      background: #a5d6a7;
+      text-align: center;
+      padding: 10px;
+      color: #1b5e20;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png" alt="Plantinha" width="40">
       <h1>Agrofuturo</h1>
     </div>
     <nav>
@@ -20,15 +87,32 @@
       <a href="compra.html">Compra</a>
     </nav>
   </header>
+  
+  <div class="linha-verde-topo"></div>
 
-  <main class="texto">
-    <h2>Compra</h2>
-    <p>Em breve você vai poder comprar produtos direto aqui no site 🌱</p>
-    <p>Por enquanto entre em contato pelo WhatsApp.</p>
+  <main>
+    <div class="compra-container">
+      <h2>Faça seu Pedido 💬</h2>
+      <p>Curtiu alguma coisa na nossa Galeria? Então é só chamar a gente no WhatsApp. A gente conversa, fecha seu pedido e combina a entrega. É rápido e sem complicação!</p>
+
+      <div class="caixa-whatsapp">
+        <span>📱</span>
+        <h3>Fala com a gente agora</h3>
+        <p>Clica no botão abaixo e já vai direto pro nosso WhatsApp. Manda quais produtos você quer e a gente te responde rapidinho.</p>
+        
+        <a href="https://wa.me/5544999999?text=Ola!%20Vi%20o%20site%20Agrofuturo%20e%20quero%20fazer%20um%20pedido%20%F0%9F%8C%B1" 
+           target="_blank" 
+           class="btn-whatsapp">
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="linha-verde"></div>
   </main>
-
+  
   <footer>
-    <p>© 2026 Agrofuturo - Projeto Agrinho</p>
+    <p>© 2026 Agrofuturo - Feito por Giovanna | Projeto Agrinho</p>
   </footer>
 </body>
 </html>
