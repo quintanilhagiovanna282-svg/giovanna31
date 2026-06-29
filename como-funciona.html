@@ -6,47 +6,57 @@
   <title>Como Funciona - Agrofuturo</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body { margin: 0; } /* Tira o espaço branco */
+    header { margin: 0; }
+    .linha-verde-topo {
+      width: 100%;
+      height: 8px;
+      background: #a5d6a7;
+      margin: 0; /* Encostada no topo igual você pediu */
+    }
     .como-funciona-container {
-      max-width: 900px;
+      max-width: 1100px; /* Maior pra ocupar mais */
       margin: 40px auto;
       padding: 0 20px;
       text-align: center;
     }
     .como-funciona-container h2 {
       color: #2e7d32;
-      font-size: 36px;
-      margin-bottom: 15px;
+      font-size: 40px; /* Título maior */
+      margin-bottom: 10px;
     }
     .como-funciona-container > p {
-      font-size: 18px;
-      margin-bottom: 40px;
+      font-size: 20px; /* Frase maior */
+      margin-bottom: 50px;
       color: #333;
+      font-weight: 500;
     }
     .passos {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 40px; /* Mais espaço entre as caixas */
     }
     .passo {
       background: #f1f8e9;
-      padding: 30px 20px;
-      border-radius: 12px;
-      border: 2px solid #a5d6a7;
+      padding: 40px 25px; /* Caixa maior */
+      border-radius: 16px;
+      border: 3px solid #a5d6a7;
+      min-height: 250px; /* Altura maior */
     }
     .passo span {
-      font-size: 50px;
+      font-size: 60px; /* Número maior */
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     .passo h3 {
       color: #2e7d32;
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 24px; /* Título do passo maior */
+      margin-bottom: 12px;
     }
     .passo p {
-      font-size: 16px;
+      font-size: 17px; /* Texto maior */
       color: #333;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header .logo { display: flex; align-items: center; gap: 10px; }
     header .logo h1::after { content: " 🌱"; }
@@ -79,10 +89,12 @@
     </nav>
   </header>
   
+  <div class="linha-verde-topo"></div> <!-- BARRA VERDE ENCOSTADA NO TOPO -->
+
   <main>
     <div class="como-funciona-container">
-      <h2>Como Funciona</h2>
-      <p>É muito fácil comprar direto do campo com o Agrofuturo 👇</p>
+      <h2>Como Funciona ❓</h2>
+      <p>Ficou com dúvida? É super simples comprar direto do campo com o Agrofuturo 👇</p> <!-- FRASE NOVA -->
 
       <div class="passos">
         <div class="passo">
