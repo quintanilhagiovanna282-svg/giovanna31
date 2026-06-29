@@ -14,25 +14,25 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* AGROFUTURO ESQUERDA, VAZIO DIREITA */
+  justify-content: space-between;
   align-items: center;
 }
 header h1 {
   color: white;
   margin: 0;
-  font-size: 2.5em; /* MAIOR IGUAL VOCÊ PEDIU */
+  font-size: 2.5em;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 .espaco-logo {
-  width: 150px; /* ESPAÇO BRANCO PRA LOGO */
+  width: 150px;
   height: 60px;
   background: transparent;
 }
 header nav {
   display: flex;
-  justify-content: flex-end; /* MENU TODO PRA DIREITA */
+  justify-content: flex-end;
   gap: 25px;
   margin-top: 15px;
 }
@@ -44,11 +44,10 @@ header nav a {
 }
 header nav a:hover { text-decoration: underline; }
 
-/* BANNER VAZIO METADE DA TELA PRA VOCÊ COLOCAR IMAGEM */
 .banner {
   width: 100%;
-  height: 50vh; /* METADE DA TELA */
-  background: #f0f0f0; /* BRANCO/CINZA CLARO PRA VOCÊ COLOCAR A IMAGEM */
+  height: 50vh;
+  background: #f0f0f0;
   display: block;
 }
 
@@ -64,7 +63,6 @@ header nav a:hover { text-decoration: underline; }
   margin-bottom: 20px;
 }
 
-/* GALERIA 3x3 */
 .titulo-galeria {
   display: flex;
   justify-content: center;
@@ -87,31 +85,3 @@ header nav a:hover { text-decoration: underline; }
   object-fit: cover;
   border-radius: 8px;
 }
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Agrofuturo</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <div class="header-top">
-      <h1>Agrofuturo 🌱</h1>
-      <div class="espaco-logo"></div> <!-- ESPAÇO BRANCO PRA SUA LOGO -->
-    </div>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="galeria.html">Galeria</a>
-      <a href="como-funciona.html">Como Funciona</a>
-      <a href="beneficios.html">Benefícios</a>
-      <a href="compra.html">Compra</a>
-    </nav>
-  </header>
-
-  <section class="banner">
-    <!-- VOCÊ COLOCA A IMAGEM AQUI DEPOIS -->
-  </section>
-
-</body>
-</html>
