@@ -3,128 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria - Agrofuturo</title>
+  <title>Agrofuturo - Galeria</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .galeria-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .galeria-container h2 {
-      color: #2e7d32;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    .galeria-container p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #333;
-    }
-    .grid-fotos {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 colunas igual seu vídeo */
-      gap: 40px;
-      justify-items: center;
-    }
-    .item-galeria {
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-    .item-galeria span {
-      font-size: 60px; /* Emoji grande igual você quer */
-      display: block;
-      margin-bottom: 8px;
-    }
-    header .logo { display: flex; align-items: center; gap: 10px; }
-    header .logo h1::after { content: " 🌱"; }
-    .linha-verde {
-      width: 100%;
-      height: 8px;
-      background: #a5d6a7;
-      margin-top: 40px;
-    }
-    footer {
-      background: #a5d6a7;
-      text-align: center;
-      padding: 10px;
-      color: #1b5e20;
-      font-weight: bold;
-    }
-  </style>
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <h1>Agrofuturo</h1>
-    </div>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="galeria.html">Galeria</a>
-      <a href="como-funciona.html">Como Funciona</a>
-      <a href="beneficios.html">Benefícios</a>
-      <a href="compra.html">Compra</a>
+<body style="margin: 0; font-family: Arial, sans-serif; background: #f9f9f9;">
+
+  <!-- CABEÇALHO VERDE -->
+  <header style="background: #2e7d32; padding: 15px 30px;">
+    <h1 style="color: white; margin: 0; font-size: 28px; display: inline-block;">Agrofuturo 🌱</h1>
+    <nav style="float: right; margin-top: 8px;">
+      <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Início</a>
+      <a href="galeria.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Galeria</a>
+      <a href="como-funciona.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Como Funciona</a>
+      <a href="beneficios.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Benefícios</a>
+      <a href="compra.html" style="color: white; margin-left: 20px; text-decoration: none; font-weight: bold;">Compra</a>
     </nav>
   </header>
-  
-  <main>
-    <div class="galeria-container">
-      <h2>Nossa Galeria</h2>
-      <p>Veja um pouco do campo, da tecnologia e do futuro que a gente planta 🌱</p>
-      
-      <div class="grid-fotos">
-        <!-- COLUNA 1 -->
-        <div class="item-galeria">
-          <span>🌽</span>
-          milho
-        </div>
-        <div class="item-galeria">
-          <span>🥔</span>
-          batata
-        </div>
-        <div class="item-galeria">
-          <span>🎃</span>
-          abóbora
-        </div>
 
-        <!-- COLUNA 2 -->
-        <div class="item-galeria">
-          <span>🍓</span>
-          morango
-        </div>
-        <div class="item-galeria">
-          <span>🥕</span>
-          cenoura
-        </div>
-        <div class="item-galeria">
-          <span>🥬</span>
-          alface
-        </div>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main style="max-width: 1000px; margin: 0 auto; padding: 40px 20px; text-align: center;">
+    
+    <!-- 1. TÍTULO NOVO -->
+    <h2 style="color: #2e7d32; font-size: 36px; margin-bottom: 10px;">
+      Do Campo pra Sua Mesa 🧺
+    </h2>
 
-        <!-- COLUNA 3 -->
-        <div class="item-galeria">
-          <span>🫑</span>
-          pimentão
-        </div>
-        <div class="item-galeria">
-          <span>🍊</span>
-          laranja
-        </div>
-        <div class="item-galeria">
-          <span>🫘</span>
-          feijão
-        </div>
+    <!-- 2. FRASE NOVA -->
+    <p style="font-size: 18px; color: #555; margin-bottom: 40px;">
+      Conheça os alimentos fresquinhos que a gente planta com carinho e tecnologia. Tudo natural, direto do Agrofuturo pra você!
+    </p>
+
+    <!-- 3. GALERIA DE FOTOS JPG FUNDO BRANCO -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+
+      <div>
+        <img src="https://i.imgur.com/8QZ3v1k.png" alt="Milho" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Milho</p>
       </div>
-    </div>
 
-    <div class="linha-verde"></div>
+      <div>
+        <img src="https://i.imgur.com/yW5Z9jP.png" alt="Batata" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Batata</p>
+      </div>
+
+      <div>
+        <img src="https://i.imgur.com/9vQ4a2m.png" alt="Tomate" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Tomate</p>
+      </div>
+
+      <div>
+        <img src="https://i.imgur.com/3mK8s1L.png" alt="Morango" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Morango</p>
+      </div>
+
+      <div>
+        <img src="https://i.imgur.com/2nR7c0B.png" alt="Cenoura" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Cenoura</p>
+      </div>
+
+      <div>
+        <img src="https://i.imgur.com/7xF1d5A.png" alt="Alface" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Alface</p>
+      </div>
+      
+      <div>
+        <img src="https://i.imgur.com/1wP6b9C.png" alt="Pimentão" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Pimentão</p>
+      </div>
+
+      <div>
+        <img src="https://i.imgur.com/5tH3e8D.png" alt="Laranja" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Laranja</p>
+      </div>
+
+      <div>
+        <img src="https://i.imgur.com/6uG2f4E.png" alt="Soja" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <p style="font-weight: bold; color: #333; margin-top: 10px;">Soja</p>
+      </div>
+
+    </div>
   </main>
+
+  <!-- BARRINHA VERDE -->
+  <div style="width: 100%; height: 8px; background: #a5d6a7; margin-top: 40px;"></div>
   
-  <footer>
+  <footer style="background: #a5d6a7; text-align: center; padding: 10px; color: #1b5e20; font-weight: bold;">
     <p>© 2026 Agrofuturo - Feito por Giovanna | Projeto Agrinho</p>
   </footer>
+
 </body>
 </html>
