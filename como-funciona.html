@@ -2,14 +2,73 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Como Funciona - Agrofuturo</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .como-funciona-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .como-funciona-container h2 {
+      color: #2e7d32;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    .como-funciona-container > p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    .passos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .passo {
+      background: #f1f8e9;
+      padding: 30px 20px;
+      border-radius: 12px;
+      border: 2px solid #a5d6a7;
+    }
+    .passo span {
+      font-size: 50px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .passo h3 {
+      color: #2e7d32;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .passo p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+    header .logo { display: flex; align-items: center; gap: 10px; }
+    header .logo h1::after { content: " 🌱"; }
+    .linha-verde {
+      width: 100%;
+      height: 8px;
+      background: #a5d6a7;
+      margin-top: 40px;
+    }
+    footer {
+      background: #a5d6a7;
+      text-align: center;
+      padding: 10px;
+      color: #1b5e20;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="header-top">
-      <h1>Agrofuturo 🌱</h1>
-      <div class="espaco-logo"></div>
+    <div class="logo">
+      <h1>Agrofuturo</h1>
     </div>
     <nav>
       <a href="index.html">Início</a>
@@ -19,9 +78,38 @@
       <a href="compra.html">Compra</a>
     </nav>
   </header>
-  <main class="container">
-    <h2>Como Funciona</h2>
-    <p>Você escolhe suas hortaliças na galeria, faz o pedido pelo WhatsApp e recebe fresquinho toda semana direto do produtor.</p>
+  
+  <main>
+    <div class="como-funciona-container">
+      <h2>Como Funciona</h2>
+      <p>É muito fácil comprar direto do campo com o Agrofuturo 👇</p>
+
+      <div class="passos">
+        <div class="passo">
+          <span>1️⃣</span>
+          <h3>Escolha na Galeria</h3>
+          <p>Você navega na nossa Galeria e escolhe as hortaliças e frutas que mais gostar 🥕🍓</p>
+        </div>
+
+        <div class="passo">
+          <span>2️⃣</span>
+          <h3>Faça o Pedido</h3>
+          <p>Clica no WhatsApp e fala com a gente. É rápido, direto e sem enrolação 💬</p>
+        </div>
+
+        <div class="passo">
+          <span>3️⃣</span>
+          <h3>Receba em Casa</h3>
+          <p>A gente colhe fresquinho e entrega pra você. Comida do campo pra sua mesa 🏠</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="linha-verde"></div>
   </main>
+  
+  <footer>
+    <p>© 2026 Agrofuturo - Feito por Giovanna | Projeto Agrinho</p>
+  </footer>
 </body>
 </html>
