@@ -6,29 +6,45 @@
   <title>Agrofuturo - Projeto Agrinho</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    main img {
-      width: 90%;
-      max-width: 1000px;
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+    .foto-campo {
+      width: 60%;
       border-radius: 12px;
-      display: block;
-      margin: 30px 0; /* Foto no canto esquerdo */
       animation: subir 1s ease-out;
     }
+    .espaco-logo {
+      flex: 1;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+      padding-top: 20px;
+    }
     .texto {
-      padding: 0 20px;
+      padding: 20px;
       max-width: 900px;
+    }
+    .faixa-verde {
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(90deg, #2e7d32 70%, #fbc02d 30%); /* Verde + amarelo igual no print */
+      margin-top: 40px;
     }
     @keyframes subir {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
     header .logo { display: flex; align-items: center; gap: 10px; }
+    header .logo h1::after { content: " 🌱"; }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png" alt="Plantinha" width="40">
       <h1>Agrofuturo</h1>
     </div>
     <nav>
@@ -41,11 +57,19 @@
   </header>
   
   <main>
-    <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura">
-    <div class="texto">
-      <h2>Agrofuturo</h2>
-      <p>Acredito que produzir com respeito ao meio ambiente é o futuro. O Agrofuturo conecta o campo e a cidade levando comida saudável, plantada com cuidado e sem desperdício, direto pra sua mesa.</p>
+    <div class="hero">
+      <img src="https://agronegocio.insumoagricola.com.br/wp-content/uploads/2022/02/agricultura-no-campo-copia.jpg" alt="Campo de agricultura" class="foto-campo">
+      <div class="espaco-logo">
+        <p>Espaço pra sua logo aqui</p>
+      </div>
     </div>
+
+    <div class="texto">
+      <h2>Agrofuturo, Alimentando o Futuro</h2> <!-- Título do seu print -->
+      <p>Produzir com respeito à terra é plantar o amanhã. O Agrofuturo une tecnologia e natureza para levar alimentos saudáveis para a sua casa.</p> <!-- Frase do print -->
+    </div>
+
+    <div class="faixa-verde"></div> <!-- A barra verde + amarela aqui -->
   </main>
   
   <footer>
