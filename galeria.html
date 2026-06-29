@@ -21,71 +21,41 @@
   </header>
 
   <!-- CONTEÚDO PRINCIPAL -->
+    <style>
+    @keyframes descer {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animar-descer { animation: descer 1s ease-out; }
+    .item-galeria { animation: descer 0.8s ease-out forwards; opacity: 0; }
+    .item-galeria:nth-child(1){ animation-delay: 0.2s; }
+    .item-galeria:nth-child(2){ animation-delay: 0.3s; }
+    .item-galeria:nth-child(3){ animation-delay: 0.4s; }
+    .item-galeria:nth-child(4){ animation-delay: 0.5s; }
+    .item-galeria:nth-child(5){ animation-delay: 0.6s; }
+    .item-galeria:nth-child(6){ animation-delay: 0.7s; }
+    .item-galeria:nth-child(7){ animation-delay: 0.8s; }
+    .item-galeria:nth-child(8){ animation-delay: 0.9s; }
+    .item-galeria:nth-child(9){ animation-delay: 1.0s; }
+  </style>
+
   <main style="max-width: 1000px; margin: 0 auto; padding: 40px 20px; text-align: center;">
-    
-    <!-- 1. TÍTULO VERDE COM MORANGO E BANANA -->
-    <h2 style="color: #2e7d32; font-size: 36px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 15px;">
-      <img src="https://i.imgur.com/3mK8s1L.png" alt="Morango" style="width: 40px; height: 40px;">
-      Conheça nossa galeria de alimentos
-      <img src="https://i.imgur.com/8QZ3v1k.png" alt="Banana" style="width: 40px; height: 40px;">
+    <h2 class="animar-descer" style="color: #2e7d32; font-size: 36px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f353.png" style="width: 40px; height: 40px;"> Conheça nossa galeria de alimentos <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f34c.png" style="width: 40px; height: 40px;">
     </h2>
-
-    <!-- 2. 3ª FRASE / EXPLICAÇÃO -->
-    <p style="font-size: 18px; color: #555; margin-bottom: 40px;">
-      Veja um pouco do campo, da tecnologia e do futuro que a gente planta 🌱
-    </p>
-
-    <!-- GALERIA DE FOTOS JPG FUNDO BRANCO -->
+    <p class="animar-descer" style="font-size: 18px; color: #555; margin-bottom: 40px; animation-delay: 0.2s;">Veja um pouco do campo, da tecnologia e do futuro que a gente planta 🌱</p>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-
-      <div>
-        <img src="https://i.imgur.com/8QZ3v1k.png" alt="Milho" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Milho</p>
-      </div>
-
-      <div>
-        <img src="https://i.imgur.com/yW5Z9jP.png" alt="Batata" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Batata</p>
-      </div>
-
-      <div>
-        <img src="https://i.imgur.com/9vQ4a2m.png" alt="Tomate" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Tomate</p>
-      </div>
-
-      <div>
-        <img src="https://i.imgur.com/3mK8s1L.png" alt="Morango" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Morango</p>
-      </div>
-
-      <div>
-        <img src="https://i.imgur.com/2nR7c0B.png" alt="Cenoura" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Cenoura</p>
-      </div>
-
-      <div>
-        <img src="https://i.imgur.com/7xF1d5A.png" alt="Alface" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Alface</p>
-      </div>
-      
-      <div>
-        <img src="https://i.imgur.com/1wP6b9C.png" alt="Pimentão" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Pimentão</p>
-      </div>
-
-      <div>
-        <img src="https://i.imgur.com/5tH3e8D.png" alt="Laranja" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Laranja</p>
-      </div>
-
-      <div>
-        <img src="https://i.imgur.com/6uG2f4E.png" alt="Soja" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Soja</p>
-      </div>
-
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f33d.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Milho</b></p></div>
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f954.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Batata</b></p></div>
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f345.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Tomate</b></p></div>
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f353.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Morango</b></p></div>
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f955.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Cenoura</b></p></div>
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f96c.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Alface</b></p></div>
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f336.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Pimentão</b></p></div>
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f34a.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Laranja</b></p></div>
+      <div class="item-galeria"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f332.png" style="width: 120px; height: 120px; background: white; padding: 15px; border-radius: 12px;"><p><b>Soja</b></p></div>
     </div>
   </main>
-
   <!-- BARRINHA VERDE -->
   <div style="width: 100%; height: 8px; background: #a5d6a7; margin-top: 40px;"></div>
   
