@@ -32,7 +32,7 @@
     }
     .grid-beneficios {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2x2 = 4 caixas */
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
     }
     .card-beneficio {
@@ -41,24 +41,27 @@
       border-radius: 16px;
       border: 3px solid #a5d6a7;
       transition: transform 0.3s ease;
+      text-align: left; /* Texto alinhado pra ficar mais natural */
     }
     .card-beneficio:hover {
-      transform: scale(1.05); /* Aumenta ao passar o mouse igual a galeria */
+      transform: scale(1.03);
     }
     .card-beneficio span {
-      font-size: 60px; /* Emoji grande igual você quer */
+      font-size: 60px;
       display: block;
+      text-align: center;
       margin-bottom: 15px;
     }
     .card-beneficio h3 {
       color: #2e7d32;
       font-size: 24px;
       margin-bottom: 12px;
+      text-align: center;
     }
     .card-beneficio p {
       font-size: 17px;
       color: #333;
-      line-height: 1.7;
+      line-height: 1.8; /* Mais espaço entre linhas pra ficar mais leve */
     }
     header .logo { display: flex; align-items: center; gap: 10px; }
     header .logo h1::after { content: " 🌱"; }
@@ -95,32 +98,32 @@
 
   <main>
     <div class="beneficios-container">
-      <h2>Benefícios</h2>
-      <p>Alimentos 100% orgânicos, sem agrotóxicos, mais saudáveis pra você e melhores pro meio ambiente 🌍</p>
+      <h2>Por que escolher o Agrofuturo? 💚</h2>
+      <p>A gente acredita que comida boa é comida de verdade. Olha só os motivos pra você comprar com a gente:</p>
 
       <div class="grid-beneficios">
         <div class="card-beneficio">
           <span>🌱</span>
-          <h3>100% Orgânico</h3>
-          <p>Nada de veneno! Plantamos sem agrotóxicos pra cuidar da sua saúde e da natureza.</p>
+          <h3>Comida sem veneno, de verdade</h3>
+          <p>Aqui a gente não usa agrotóxico. A gente planta do jeito que a natureza ensina: com cuidado, com respeito e com paciência. Isso faz toda a diferença na sua saúde, porque você come um alimento mais limpo, mais seguro e com o gosto de verdade. E ainda ajuda a cuidar da terra, da água e dos bichinhos do campo. É bom pra você e bom pro planeta 🌍</p>
         </div>
 
         <div class="card-beneficio">
           <span>🚜</span>
-          <h3>Direto do Produtor</h3>
-          <p>Sem atravessador. Você compra direto de quem planta, com preço justo pra todo mundo.</p>
+          <h3>Quem planta, ganha justo</h3>
+          <p>Quando você compra pelo Agrofuturo, o dinheiro vai direto pro produtor rural. Sem atravessador no meio do caminho. Isso significa um preço mais justo pra você e uma renda digna pra quem trabalha no campo todo dia. A gente quer valorizar quem planta a comida que chega na sua mesa 👨‍🌾</p>
         </div>
 
         <div class="card-beneficio">
           <span>💻</span>
-          <h3>Tecnologia no Campo</h3>
-          <p>Usamos irrigação inteligente e monitoramento pra plantar melhor e gastar menos água.</p>
+          <h3>Tecnologia pra ajudar, não pra atrapalhar</h3>
+          <p>A gente usa a tecnologia do lado certo. Temos sistema de irrigação que só gasta água quando a planta precisa e monitoramos o solo pelo celular. Mas no final, quem cuida da plantinha é a mão do agricultor. A tecnologia só vem pra ajudar a plantar melhor, com menos desperdício e mais qualidade.</p>
         </div>
 
         <div class="card-beneficio">
           <span>🏠</span>
-          <h3>Frescor Garantido</h3>
-          <p>Colhemos hoje, entregamos hoje. Mais sabor, mais vitaminas e mais qualidade na sua mesa.</p>
+          <h3>Da terra pra sua casa em poucas horas</h3>
+          <p>Esquece aquela verdura que ficou 10 dias no mercado. Aqui a gente colhe no dia e entrega no mesmo dia. Por isso ela chega mais crocante, mais cheirosa e com muito mais vitamina. É frescor de verdade. É o sabor do campo chegando direto na sua cozinha 🍓</p>
         </div>
       </div>
     </div>
