@@ -87,3 +87,31 @@ header nav a:hover { text-decoration: underline; }
   object-fit: cover;
   border-radius: 8px;
 }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agrofuturo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1>Agrofuturo 🌱</h1>
+      <div class="espaco-logo"></div> <!-- ESPAÇO BRANCO PRA SUA LOGO -->
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="como-funciona.html">Como Funciona</a>
+      <a href="beneficios.html">Benefícios</a>
+      <a href="compra.html">Compra</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <!-- VOCÊ COLOCA A IMAGEM AQUI DEPOIS -->
+  </section>
+
+</body>
+</html>
