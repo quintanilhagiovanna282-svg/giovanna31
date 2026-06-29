@@ -8,26 +8,18 @@ body {
 header {
   background: #2d6a2d;
   color: white;
-  padding: 10px 30px;
+  padding: 15px 30px;
+  text-align: center;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
-.topo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.topo h1 { margin: 5px 0; font-size: 1.8em; display: flex; align-items: center; gap: 10px; }
-.espaco-logo {
-  border: 1px dashed white;
-  padding: 8px 20px;
-  border-radius: 5px;
-  font-size: 0.9em;
-}
+header h1 { margin: 0 0 10px 0; font-size: 2em; display: inline-flex; align-items: center; gap: 8px; }
 header nav {
-  margin-top: 10px;
   display: flex;
+  justify-content: center;
   gap: 25px;
+  flex-wrap: wrap;
 }
 header nav a {
   color: white;
@@ -37,27 +29,19 @@ header nav a {
 }
 header nav a:hover { text-decoration: underline; }
 
-/* BANNER COM FOTO DO LADO ESQUERDO */
-.banner {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* BANNER SÓ ATÉ A METADE IGUAL AO VÍDEO */
+.banner-cheio img {
+  width: 100%;
+  height: 50vh; /* 50% da altura da tela */
+  object-fit: cover;
+  display: block;
 }
-.banner img {
-  width: 50%;
-  max-width: 500px;
-  border-radius: 15px;
-}
-.texto-banner h2 { font-size: 2.5em; color: #2d6a2d; margin: 0; }
-.texto-banner p { font-size: 1.2em; }
 
 .container { max-width: 900px; margin: 60px auto; padding: 0 20px; text-align: center; }
-section h2 { color: #2d6a2d; font-size: 2em; border-bottom: 2px solid #2d6a2d; padding-bottom: 10px; display: inline-block; }
+.container h2 { color: #2d6a2d; font-size: 2em; border-bottom: 2px solid #2d6a2d; padding-bottom: 10px; display: inline-block; }
+section { padding: 40px 0; }
 
-/* ===== GALERIA 3x3 ===== */
+/* ===== GALERIA 3x3 COM ANIMAÇÃO ===== */
 .titulo-galeria {
   display: flex;
   justify-content: center;
@@ -98,7 +82,7 @@ section h2 { color: #2d6a2d; font-size: 2em; border-bottom: 2px solid #2d6a2d; p
 }
 .card p { margin-top: 12px; font-weight: bold; font-size: 1.1em; }
 
-@keyframes subir { to { opacity: 1; transform: translateY(0); }
+@keyframes subir { to { opacity: 1; transform: translateY(0); } }
 .card:nth-child(1) { animation-delay: 0.1s; }
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
