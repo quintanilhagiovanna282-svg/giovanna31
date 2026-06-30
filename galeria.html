@@ -8,82 +8,71 @@
 body { 
   font-family: Arial, sans-serif; 
   margin: 0; 
-  background: #f8f9fa; 
+  background: #f5f5f5; 
 }
+
 header { 
   background: #2e7d32; 
   color: white; 
-  padding: 20px; 
+  padding: 8px; /* BARRA VERDE FININHA */
   text-align: center; 
-}
-.galeria { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-  gap: 25px; 
-  padding: 40px; 
-  max-width: 1200px; 
-  margin: auto; 
-}
-.alimento { 
-  background: white; 
-  border-radius: 15px; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-  text-align: center; 
-  padding: 15px; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-.alimento:hover { 
-  transform: translateY(-8px); 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
-}
-.alimento img { 
-  width: 100%; 
-  height: 180px; 
-  object-fit: cover; 
-  border-radius: 10px; 
-  margin-bottom: 10px; 
-}
-.alimento h3 { 
-  font-weight: bold; 
-  font-size: 1.1em; 
-  color: #333; 
-  margin: 0; 
-}
-footer { 
-  text-align: center; 
-  padding: 20px; 
-  background: #2e7d32; 
-  color: white; 
-  margin-top: 40px; 
-}
-/* Deixa a barra verde menor */
-header { 
-  padding: 10px; 
 }
 
-/* Deixa o link branco em vez de azul */
-header a {
-  color: white;
-  text-decoration: none; 
-  font-size: 0.9em;
-/* 1. Barra verde fininha */
-header { 
-  padding: 8px; 
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
 }
 
-/* 2. Palavras do menu grandes */
 header nav {
-  font-size: 1.2em; 
+  font-size: 24px; /* PALAVRAS DO MENU GRANDES */
   font-weight: bold;
   margin-top: 5px;
 }
 
 header nav a {
-  color: white;
+  color: white; /* LINK BRANCO */
   text-decoration: none;
-  margin: 0 10px; 
+  margin: 0 12px; /* ESPAÇO ENTRE ELAS */
 }
-  </style>
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.galeria { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 25px; 
+  padding: 40px; 
+  max-width: 1400px; 
+  margin: auto; 
+}
+
+.card { 
+  background: white; 
+  border-radius: 12px; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  overflow: hidden; 
+  text-align: center; 
+  padding-bottom: 15px;
+}
+
+.card img { 
+  width: 100%; 
+  height: 180px; 
+  object-fit: cover; 
+}
+
+.card h3 { 
+  margin: 12px 0 5px; 
+  color: #2e7d32; 
+}
+
+.card p { 
+  margin: 0; 
+  color: #555; 
+  font-size: 0.9em; 
+}  </style>
 </head>
 <body>
   <!-- MENU NA ORDEM CERTA: Início Galeria Como Funciona Benefícios Compra -->
