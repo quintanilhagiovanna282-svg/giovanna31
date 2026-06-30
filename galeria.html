@@ -5,136 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeria - Agrofuturo</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; color: #333; }
+    
+    /* 1. CABEÇALHO MENOR COMO VOCÊ PEDIU */
+    header { 
+      background: #2e7d32; 
+      color: white; 
+      padding: 10px 30px; /* Diminui a altura aqui */
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
     }
-    header {
-      background: #2e7d32;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    header h1 { margin: 0; font-size: 20px; } /* Diminui o Agrofuturo */
+    header nav a { 
+      color: white; 
+      text-decoration: none; 
+      margin-left: 18px; /* Espaço menor entre os links */
+      font-weight: bold; 
+      font-size: 15px; /* Diminui o menu */
     }
-    header nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-    header nav a:hover {
-      text-decoration: underline;
-    }
+    header nav a:hover { text-decoration: underline; }
 
-    /* ANIMAÇÃO IGUAL A DO INÍCIO */
-    @keyframes descer {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animar-descer {
-      animation: descer 1s ease-out;
-    }
-    .item-galeria {
-      animation: descer 0.8s ease-out forwards;
-      opacity: 0;
-    }
-    .item-galeria:nth-child(1){ animation-delay: 0.2s; }
-    .item-galeria:nth-child(2){ animation-delay: 0.3s; }
-    .item-galeria:nth-child(3){ animation-delay: 0.4s; }
-    .item-galeria:nth-child(4){ animation-delay: 0.5s; }
-    .item-galeria:nth-child(5){ animation-delay: 0.6s; }
-    .item-galeria:nth-child(6){ animation-delay: 0.7s; }
-    .item-galeria:nth-child(7){ animation-delay: 0.8s; }
-    .item-galeria:nth-child(8){ animation-delay: 0.9s; }
-    .item-galeria:nth-child(9){ animation-delay: 1.0s; }
-
-    footer {
-      background: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
+    footer { background: #2e7d32; color: white; text-align: center; padding: 15px; margin-top: 40px; }
   </style>
 </head>
 <body>
-
+  <!-- 2. MENU NA ORDEM CERTA: Início Galeria Como Funciona Benefícios Compra -->
   <header>
     <h1>Agrofuturo 🌱</h1>
     <nav>
       <a href="index.html">Início</a>
       <a href="galeria.html">Galeria</a>
-      <a href="#">Como Funciona</a>
-      <a href="#">Contato</a>
+      <a href="como-funciona.html">Como Funciona</a>
+      <a href="beneficios.html">Benefícios</a>
+      <a href="compra.html">Compra</a>
     </nav>
   </header>
 
   <main style="max-width: 1000px; margin: 0 auto; padding: 40px 20px; text-align: center;">
     
-    <!-- 1. TÍTULO VERDE COM MORANGO E BANANA + ANIMAÇÃO -->
-    <h2 class="animar-descer" style="color: #2e7d32; font-size: 36px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 15px;">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f353.png" alt="Morango" style="width: 40px; height: 40px;">
+    <!-- 3. TÍTULO SEM EMOJI COMO VOCÊ PEDIU -->
+    <h2 style="color: #2e7d32; font-size: 36px; margin-bottom: 10px;">
       Conheça nossa galeria de alimentos
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f34c.png" alt="Banana" style="width: 40px; height: 40px;">
     </h2>
 
-    <!-- 2. FRASE + ANIMAÇÃO -->
-    <p class="animar-descer" style="font-size: 18px; color: #555; margin-bottom: 40px; animation-delay: 0.2s;">
+    <p style="font-size: 18px; color: #555; margin-bottom: 40px;">
       Veja um pouco do campo, da tecnologia e do futuro que a gente planta 🌱
     </p>
 
-    <!-- 3. GALERIA DE FOTOS 3x3 COM LINKS QUE NUNCA QUEBRAM -->
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-      
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f33d.png" alt="Milho" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Milho</p>
-      </div>
+    <!-- 4. GALERIA DEIXEI VAZIA POR ENQUANTO PRA VOCÊ TESTAR -->
+    <p style="color: #888;">Aqui vão entrar as imagens depois que o cabeçalho ficar certo.</p>
 
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f954.png" alt="Batata" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Batata</p>
-      </div>
-
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f345.png" alt="Tomate" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Tomate</p>
-      </div>
-
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f353.png" alt="Morango" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Morango</p>
-      </div>
-
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f955.png" alt="Cenoura" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Cenoura</p>
-      </div>
-
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f96c.png" alt="Alface" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Alface</p>
-      </div>
-      
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f336.png" alt="Pimentão" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Pimentão</p>
-      </div>
-
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f34a.png" alt="Laranja" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Laranja</p>
-      </div>
-
-      <div class="item-galeria">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/512x512/1f332.png" alt="Soja" style="width: 120px; height: 120px; object-fit: contain; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        <p style="font-weight: bold; color: #333; margin-top: 10px;">Soja</p>
-      </div>
-
-    </div>
   </main>
 
   <footer>
