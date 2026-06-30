@@ -1,81 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria - Agrofuturo</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-    }
-    /* CABEÇALHO IGUALZINHO AO INÍCIO - TAMANHO NORMAL */
-    header {
-      background: #2e7d32;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    header nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-    header nav a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- MENU NA ORDEM CERTA: Início Galeria Como Funciona Benefícios Compra -->
-  <header>
-    <h1>Agrofuturo 🌱</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="galeria.html">Galeria</a>
-      <a href="como-funciona.html">Como Funciona</a>
-      <a href="beneficios.html">Benefícios</a>
-      <a href="compra.html">Compra</a>
-    </nav>
-  </header>
-
-  <main style="max-width: 1000px; margin: 0 auto; padding: 40px 20px; text-align: center;">
-    
-    <!-- TÍTULO SEM EMOJI COMO VOCÊ PEDIU -->
-    <h2 style="color: #2e7d32; font-size: 36px; margin-bottom: 10px;">
-      Conheça nossa galeria de alimentos
-    </h2>
-
-    <p style="font-size: 18px; color: #555; margin-bottom: 40px;">
-      Veja um pouco do campo, da tecnologia e do futuro que a gente planta 🌱
-    </p>
-
-    <!-- VAMOS DEIXAR SEM AS FOTOS AINDA PRA TESTAR SÓ O CABEÇALHO -->
-    <p style="color: #888;">As imagens entram aqui depois.</p>
-
-  </main>
-
-  <footer>
-    <p>© 2025 Agrofuturo - Todos os direitos reservados</p>
-  </footer>
-
-</body>
-</html>
+<main style="max-width: 1000px; margin: 0 auto; padding: 40px 20px; text-align: center;">
+  <h2 style="color: #2e7d32; font-size: 36px; margin-bottom: 10px;">
+    Conheça nossa galeria de alimentos
+  </h2>
+  <p style="font-size: 18px; color: #555; margin-bottom: 40px;">
+    Veja um pouco do campo, da tecnologia e do futuro que a gente planta 🌱
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+    <div class="alimento">
+      <img src="imagens/cenoura.jpg" alt="Cenoura">
+      <h3>Cenoura</h3>
+    </div>
+    <div class="alimento">
+      <img src="imagens/batata.jpg" alt="Batata">
+      <h3>Batata</h3>
+    </div>
+    <div class="alimento">
+      <img src="imagens/morango.jpg" alt="Morango">
+      <h3>Morango</h3>
+    </div>
+    <div class="alimento">
+      <img src="imagens/tomate.jpg" alt="Tomate">
+      <h3>Tomate</h3>
+    </div>
+    <div class="alimento">
+      <img src="imagens/alface.jpg" alt="Alface">
+      <h3>Alface</h3>
+    </div>
+    <div class="alimento">
+      <img src="imagens/pimentao.jpg" alt="Pimentão">
+      <h3>Pimentão</h3>
+    </div>
+    <div class="alimento">
+      <img src="imagens/laranja.jpg" alt="Laranja">
+      <h3>Laranja</h3>
+    </div>
+    <div class="alimento">
+      <img src="imagens/soja.jpg" alt="Soja">
+      <h3>Soja</h3>
+    </div>
+    <div class="alimento">
+      <img src="imagens/milho.jpg" alt="Milho">
+      <h3>Milho</h3>
+    </div>
+  </div>
+</main>
