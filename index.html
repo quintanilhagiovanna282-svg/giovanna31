@@ -16,7 +16,31 @@
 </style>
 </head>
 <body style="margin: 0; font-family: Arial, sans-serif;">
+<!-- NOME + MODO ESCURO -->
+<input type="text" id="nomeUsuario" placeholder="Digite seu nome" 
+       style="position: fixed; top: 15px; left: 20px; width: 140px; font-size: 11px; padding: 4px 6px; border: none; border-radius: 5px; text-align: center; z-index: 9999;">
+<button id="btnModoEscuro" 
+        style="position: fixed; top: 15px; right: 20px; background: #333; color: white; border: none; padding: 4px 8px; border-radius: 15px; font-size: 11px; cursor: pointer; z-index: 9999;">
+  🌙
+</button>
 
+<style>
+body.modo-escuro { background: #1e1e1e !important; color: #f0f0f0 !important; }
+body.modo-escuro header, body.modo-escuro nav, body.modo-escuro section, body.modo-escuro div { background: #2b2b2b !important; color: #f0f0f0 !important; }
+</style>
+
+<script>
+  const inputNome = document.getElementById('nomeUsuario');
+  inputNome.value = localStorage.getItem('nomeAgro') || '';
+  inputNome.addEventListener('input', () => localStorage.setItem('nomeAgro', inputNome.value));
+  const btn = document.getElementById('btnModoEscuro');
+  if(localStorage.getItem('modo') === 'escuro') { document.body.classList.add('modo-escuro'); btn.textContent = '☀️'; }
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('modo-escuro');
+    btn.textContent = document.body.classList.contains('modo-escuro') ? '☀️' : '🌙';
+    localStorage.setItem('modo', document.body.classList.contains('modo-escuro') ? 'escuro' : 'claro');
+  });
+</script>
   <!-- CABEÇALHO VERDE -->
   <header style="background: #2e7d32; padding: 15px 30px;">
     <h1 style="color: white; margin: 0; font-size: 28px; display: inline-block;">Agrofuturo 🌱</h1>
