@@ -17,29 +17,42 @@
 </head>
 <body style="margin: 0; font-family: Arial, sans-serif;">
 <style>
-  header { position: relative; } /* Para prender a lua no verde */
+  header { position: relative; }
 
-  /* NOME NA PARTE BRANCA, DO LADO DA FOTO */
-  #nomeUsuario {
+  /* NOME NA PARTE BRANCA */
+  .nome-box {
     position: absolute;
-    top: 120px; /* Desce pra parte branca */
-    left: 30px; /* Gruda na esquerda, do lado da foto */
-    width: 180px;
+    top: 85px; 
+    left: 30px; 
+    display: flex;
+    gap: 5px;
+    z-index: 5;
+  }
+  #nomeUsuario {
+    width: 150px;
     font-size: 12px; 
     padding: 6px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     text-align: center;
     background: white;
-    z-index: 5;
+  }
+  #btnApagarNome {
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0 8px;
+    cursor: pointer;
+    font-weight: bold;
   }
 
-  /* LUA PRETA NO VERDE, EMBAIXO DO COMPRA */
+  /* LUA PRETA NO CANTO */
   #btnModoEscuro {
     position: absolute; 
-    top: 45px; /* Desce um pouco no verde */
-    right: 20px; /* Cola no lado direito, perto do Compra */
-    background: #000; /* Preta, sem verde */
+    top: 90px; 
+    right: 20px; 
+    background: #000; 
     color: white; 
     border: none; 
     padding: 6px 10px; 
@@ -49,21 +62,44 @@
     z-index: 10;
   }
 
+  /* MODO ESCURO */
   body.modo-escuro { background: #1e1e1e !important; color: #f0f0f0 !important; }
   body.modo-escuro header, body.modo-escuro nav, body.modo-escuro section, body.modo-escuro div { background: #2b2b2b !important; color: #f0f0f0 !important; }
+  body.modo-escuro #nomeUsuario { background: #333; color: #f0f0f0; border-color: #555; }
 </style>
 
-<input type="text" id="nomeUsuario" placeholder="Digite seu nome">
+<!-- CAIXA DO NOME + BOTÃO APAGAR -->
+<div class="nome-box">
+  <input type="text" id="nomeUsuario" placeholder="Digite seu nome">
+  <button id="btnApagarNome">X</button>
+</div>
 
+<!-- BOTÃO LUA -->
 <button id="btnModoEscuro">🌙</button>
 
 <script>
+  // NOME
   const inputNome = document.getElementById('nomeUsuario');
-  inputNome.value = localStorage.getItem('nomeAgro') || '';
-  inputNome.addEventListener('input', () => localStorage.setItem('nomeAgro', inputNome.value));
+  const btnApagar = document.getElementById('btnApagarNome');
   
+  inputNome.value = localStorage.getItem('nomeAgro') || '';
+  
+  inputNome.addEventListener('input', () => {
+    localStorage.setItem('nomeAgro', inputNome.value);
+  });
+
+  btnApagar.addEventListener('click', () => {
+    inputNome.value = '';
+    localStorage.removeItem('nomeAgro');
+    inputNome.focus();
+  });
+  
+  // MODO ESCURO
   const btn = document.getElementById('btnModoEscuro');
-  if(localStorage.getItem('modo') === 'escuro') { document.body.classList.add('modo-escuro'); btn.textContent = '☀️'; }
+  if(localStorage.getItem('modo') === 'escuro') { 
+    document.body.classList.add('modo-escuro'); 
+    btn.textContent = '☀️'; 
+  }
   
   btn.addEventListener('click', () => {
     document.body.classList.toggle('modo-escuro');
