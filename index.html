@@ -19,38 +19,25 @@
 <style>
   header { position: relative; }
 
-  /* NOME NA PARTE BRANCA */
-  .nome-box {
+  /* NOME NA PARTE BRANCA - SEM O X */
+  #nomeUsuario {
     position: absolute;
     top: 85px; 
     left: 30px; 
-    display: flex;
-    gap: 5px;
-    z-index: 5;
-  }
-  #nomeUsuario {
-    width: 150px;
+    width: 180px;
     font-size: 12px; 
     padding: 6px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     text-align: center;
     background: white;
-  }
-  #btnApagarNome {
-    background: #ff4444;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0 8px;
-    cursor: pointer;
-    font-weight: bold;
+    z-index: 5;
   }
 
-  /* LUA PRETA NO CANTO */
+  /* LUA SUBIU UM POUQUINHO */
   #btnModoEscuro {
     position: absolute; 
-    top: 90px; 
+    top: 80px; /* Era 90px. Diminui 10px pra subir */
     right: 20px; 
     background: #000; 
     color: white; 
@@ -68,19 +55,13 @@
   body.modo-escuro #nomeUsuario { background: #333; color: #f0f0f0; border-color: #555; }
 </style>
 
-<!-- CAIXA DO NOME + BOTÃO APAGAR -->
-<div class="nome-box">
-  <input type="text" id="nomeUsuario" placeholder="Digite seu nome">
-  <button id="btnApagarNome">X</button>
-</div>
+<input type="text" id="nomeUsuario" placeholder="Digite seu nome">
 
-<!-- BOTÃO LUA -->
 <button id="btnModoEscuro">🌙</button>
 
 <script>
-  // NOME
+  // NOME + ENTER PRA SUMIR O CURSOR
   const inputNome = document.getElementById('nomeUsuario');
-  const btnApagar = document.getElementById('btnApagarNome');
   
   inputNome.value = localStorage.getItem('nomeAgro') || '';
   
@@ -88,10 +69,10 @@
     localStorage.setItem('nomeAgro', inputNome.value);
   });
 
-  btnApagar.addEventListener('click', () => {
-    inputNome.value = '';
-    localStorage.removeItem('nomeAgro');
-    inputNome.focus();
+  inputNome.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      inputNome.blur(); // Tira o cursor/piscando
+    }
   });
   
   // MODO ESCURO
