@@ -16,45 +16,7 @@ header nav a{color:white;margin:0 12px;text-decoration:none}
 .card img{width:100%;height:180px;object-fit:cover}
 .card h3{margin:12px 0 5px;color:#2e7d32}
 .card p{margin:0;color:#555;font-size:0.9em} 
-body { <style>
-  header { position: relative; }
-
-  /* LUA SUBIDA, IGUAL A DA HOME */
-  #btnModoEscuro {
-    position: absolute; 
-    top: 80px; /* Mesma altura da index */
-    right: 20px; 
-    background: #000; 
-    color: white; 
-    border: none; 
-    padding: 6px 10px; 
-    border-radius: 20px; 
-    font-size: 14px; 
-    cursor: pointer; 
-    z-index: 10;
-  }
-
-  /* MODO ESCURO PRA TODAS AS PÁGINAS */
-  body.modo-escuro { background: #1e1e1e !important; color: #f0f0f0 !important; }
-  body.modo-escuro header, body.modo-escuro nav, body.modo-escuro section, body.modo-escuro div { background: #2b2b2b !important; color: #f0f0f0 !important; }
-</style>
-
-<button id="btnModoEscuro">🌙</button>
-
-<script>
-  // MODO ESCURO QUE LEMBRA EM TODAS AS PÁGINAS
-  const btn = document.getElementById('btnModoEscuro');
-  if(localStorage.getItem('modo') === 'escuro') { 
-    document.body.classList.add('modo-escuro'); 
-    btn.textContent = '☀️'; 
-  }
-  
-  btn.addEventListener('click', () => {
-    document.body.classList.toggle('modo-escuro');
-    btn.textContent = document.body.classList.contains('modo-escuro') ? '☀️' : '🌙';
-    localStorage.setItem('modo', document.body.classList.contains('modo-escuro') ? 'escuro' : 'claro');
-  });
-</script>
+body { 
   font-family: Arial, sans-serif; 
   margin: 0; 
   background: #f8f9fa; 
