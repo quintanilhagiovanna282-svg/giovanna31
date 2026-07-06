@@ -73,6 +73,18 @@
       font-weight: bold;
     }
   </style>
+<style>
+  header { position: relative; }
+  #btnModoEscuro { position: absolute; top: 15px; right: 20px; background: #000; color: white; border: none; padding: 6px 10px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 999; }
+  body.modo-escuro { background: #121212 !important; color: #e0e0e0 !important; }
+  body.modo-escuro header, body.modo-escuro nav, body.modo-escuro footer { background: #1f1f1f !important; }
+</style>
+<button id="btnModoEscuro">🌙</button>
+<script>
+  const btn = document.getElementById('btnModoEscuro');
+  if(localStorage.getItem('modo') === 'escuro') { document.body.classList.add('modo-escuro'); btn.textContent = '☀️'; }
+  btn.onclick = () => { document.body.classList.toggle('modo-escuro'); localStorage.setItem('modo', document.body.classList.contains('modo-escuro') ? 'escuro' : 'claro'); btn.textContent = document.body.classList.contains('modo-escuro') ? '☀️' : '🌙'; };
+</script>
 </head>
 <body>
   <header>
