@@ -73,22 +73,24 @@
       font-weight: bold;
     }
   </style>
-   <style>
+  <style>
   header { position: relative; }
   #btnModoEscuro { position: absolute; top: 90px; right: 20px; background: #000; color: white; border: none; padding: 6px 10px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 999; }
   
-  /* MODO ESCURO GERAL */
+  /* FUNDO PRETO */
   body.modo-escuro { background: #000 !important; }
   body.modo-escuro header, body.modo-escuro nav, body.modo-escuro footer { background: #111 !important; }
+  
+  /* TÍTULO VERDE */
+  body.modo-escuro h1, body.modo-escuro h2 { color: #00ff88 !important; }
+  
+  /* TEXTO NORMAL BRANCO - ISSO PEGA TODAS AS PÁGINAS */
+  body.modo-escuro p, body.modo-escuro span, body.modo-escuro li { color: #ffffff !important; }
+  
+  /* CARDS COM FUNDO PRETO */
   body.modo-escuro .card { background: #000 !important; border: 1px solid #333; }
   
-  /* 1. TÍTULO VERDE - não mexe */
-  body.modo-escuro h2 { color: #00ff88 !important; }
-  
-  /* 2. TEXTO DE CIMA BRANCO - VOLTOU */
-  body.modo-escuro .card > p { color: #ffffff !important; }
-  
-  /* 3. CAIXINHA BRANCA + LETRA PRETA */
+  /* CAIXINHA BRANCA + LETRA PRETA SÓ DA PÁGINA COMPRA */
   body.modo-escuro .card div[style*="background: white"] { background: #ffffff !important; border-radius: 8px; padding: 15px; }
   body.modo-escuro .card div[style*="background: white"] p,
   body.modo-escuro .card div[style*="background: white"] span { color: #000 !important; }
