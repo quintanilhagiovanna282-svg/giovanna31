@@ -76,22 +76,19 @@
 <style>
   header { position: relative; }
   #btnModoEscuro { position: absolute; top: 90px; right: 20px; background: #000; color: white; border: none; padding: 6px 10px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 999; }
-  
-  /* QUANDO ATIVAR O MODO ESCURO */
-  body.modo-escuro { background: #000!important; }
-  body.modo-escuro header, body.modo-escuro nav, body.modo-escuro footer { background: #111!important; }
-  
+
+  /* MODO ESCURO */
+  body.modo-escuro { background: #000 !important; }
+  body.modo-escuro * { color: #ffffff !important; }
+
   /* TÍTULO VERDE */
-  body.modo-escuro h2 { color: #00ff88!important; }
-  
-  /* TEXTO GERAL BRANCO */
-  body.modo-escuro .card p, body.modo-escuro .card span { color: #ffffff!important; }
-  
+  body.modo-escuro h2 { color: #00ff88 !important; }
+
   /* CAIXINHA BRANCA */
-  body.modo-escuro .card div { background: #ffffff!important; border-radius: 8px; padding: 15px; }
-  
+  body.modo-escuro .card div { background: #ffffff !important; }
+
   /* LETRA PRETA DENTRO DA CAIXINHA */
-  body.modo-escuro .card div p, body.modo-escuro .card div span { color: #000!important; }
+  body.modo-escuro .card div * { color: #000 !important; }
 </style>
 <button id="btnModoEscuro">🌙</button>
 <script>
