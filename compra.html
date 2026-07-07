@@ -73,31 +73,33 @@
       font-weight: bold;
     }
   </style>
-  <style>
+ <style>
   header { position: relative; }
   #btnModoEscuro { position: absolute; top: 90px; right: 20px; background: #000; color: white; border: none; padding: 6px 10px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 999; }
   
-  /* FUNDO PRETO */
+  /* FUNDO PRETO GERAL */
   body.modo-escuro { background: #000 !important; }
   body.modo-escuro header, body.modo-escuro nav, body.modo-escuro footer { background: #111 !important; }
   
   /* TÍTULO VERDE */
-  body.modo-escuro h1, body.modo-escuro h2 { color: #00ff88 !important; }
+  body.modo-escuro h2 { color: #00ff88 !important; }
   
-  /* TEXTO NORMAL BRANCO - ISSO PEGA TODAS AS PÁGINAS */
-  body.modo-escuro p, body.modo-escuro span, body.modo-escuro li { color: #ffffff !important; }
+  /* TEXTO DE CIMA BRANCO */
+  body.modo-escuro .card > p { color: #ffffff !important; }
   
-  /* CARDS COM FUNDO PRETO */
-  body.modo-escuro .card { background: #000 !important; border: 1px solid #333; }
+  /* CAIXINHA BRANCA */
+  body.modo-escuro .card div[style*="background: white"],
+  body.modo-escuro .card div[style*="background:white"] { 
+    background: #ffffff !important; 
+    border-radius: 8px; 
+    padding: 15px; 
+  }
   
- /* CAIXINHA BRANCA + LETRA PRETA */
-body.modo-escuro .card div[style*="background: white"] { background: #ffffff !important; border-radius: 8px; padding: 15px; }
-body.modo-escuro .card div[style*="background: white"] p,
-body.modo-escuro .card div[style*="background: white"] span { color: #000 !important; }
-
-/* TEXTO DE BAIXO DA CAIXINHA - FORÇA FICAR BRANCO */
-body.modo-escuro .card > p:last-of-type,
-body.modo-escuro .card > div:last-of-type p { color: #ffffff !important; }
+  /* LETRA PRETA DENTRO DA CAIXINHA - AGORA COM !important FORTE */
+  body.modo-escuro .card div[style*="background: white"] *,
+  body.modo-escuro .card div[style*="background:white"] * { 
+    color: #000 !important; 
+  }
 </style>
 <button id="btnModoEscuro">🌙</button>
 <script>
