@@ -77,27 +77,27 @@
   header { position: relative; }
   #btnModoEscuro { position: absolute; top: 90px; right: 20px; background: #000; color: white; border: none; padding: 6px 10px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 999; }
   
-  /* FUNDO PRETO GERAL */
-  body.modo-escuro { background: #000!important; color: #ffffff!important; }
+  /* QUANDO ATIVAR O MODO ESCURO */
+  body.modo-escuro { background: #000!important; }
   body.modo-escuro header, body.modo-escuro nav, body.modo-escuro footer { background: #111!important; }
   
-  /* 1. TÍTULO VERDE */
+  /* TÍTULO VERDE */
   body.modo-escuro h2 { color: #00ff88!important; }
   
-  /* 2. TEXTO DE CIMA BRANCO - FORÇA PRA PASSAR POR CIMA DO CSS ANTIGO */
-  body.modo-escuro.card p { color: #ffffff!important; opacity: 1!important; }
+  /* TEXTO GERAL BRANCO */
+  body.modo-escuro .card p, body.modo-escuro .card span { color: #ffffff!important; }
   
-  /* 3. CAIXINHA BRANCA */
-  body.modo-escuro.card > div[style] { background: #ffffff!important; border-radius: 8px; padding: 15px; }
+  /* CAIXINHA BRANCA */
+  body.modo-escuro .card div { background: #ffffff!important; border-radius: 8px; padding: 15px; }
   
-  /* 4. LETRA PRETA DENTRO DA CAIXINHA */
-  body.modo-escuro.card > div[style] * { color: #000!important; }
+  /* LETRA PRETA DENTRO DA CAIXINHA */
+  body.modo-escuro .card div p, body.modo-escuro .card div span { color: #000!important; }
 </style>
 <button id="btnModoEscuro">🌙</button>
 <script>
   const btn = document.getElementById('btnModoEscuro');
   if(localStorage.getItem('modo') === 'escuro') { document.body.classList.add('modo-escuro'); btn.textContent = '☀️'; }
-  btn.onclick = () => { document.body.classList.toggle('modo-escuro'); localStorage.setItem('modo', document.body.classList.contains('modo-escuro')? 'escuro' : 'claro'); btn.textContent = document.body.classList.contains('modo-escuro')? '☀️' : '🌙'; };
+  btn.onclick = () => { document.body.classList.toggle('modo-escuro'); localStorage.setItem('modo', document.body.classList.contains('modo-escuro') ? 'escuro' : 'claro'); btn.textContent = document.body.classList.contains('modo-escuro') ? '☀️' : '🌙'; };
 </script>
 </head>
 <body>
