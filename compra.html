@@ -90,10 +90,14 @@
   /* CARDS COM FUNDO PRETO */
   body.modo-escuro .card { background: #000 !important; border: 1px solid #333; }
   
-  /* CAIXINHA BRANCA + LETRA PRETA SÓ DA PÁGINA COMPRA */
-  body.modo-escuro .card div[style*="background: white"] { background: #ffffff !important; border-radius: 8px; padding: 15px; }
-  body.modo-escuro .card div[style*="background: white"] p,
-  body.modo-escuro .card div[style*="background: white"] span { color: #000 !important; }
+ /* CAIXINHA BRANCA + LETRA PRETA */
+body.modo-escuro .card div[style*="background: white"] { background: #ffffff !important; border-radius: 8px; padding: 15px; }
+body.modo-escuro .card div[style*="background: white"] p,
+body.modo-escuro .card div[style*="background: white"] span { color: #000 !important; }
+
+/* TEXTO DE BAIXO DA CAIXINHA - FORÇA FICAR BRANCO */
+body.modo-escuro .card > p:last-of-type,
+body.modo-escuro .card > div:last-of-type p { color: #ffffff !important; }
 </style>
 <button id="btnModoEscuro">🌙</button>
 <script>
