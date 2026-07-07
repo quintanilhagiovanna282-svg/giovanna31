@@ -78,34 +78,26 @@
   #btnModoEscuro { position: absolute; top: 90px; right: 20px; background: #000; color: white; border: none; padding: 6px 10px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 999; }
   
   /* FUNDO PRETO GERAL */
-  body.modo-escuro { background: #000 !important; }
-  body.modo-escuro header, body.modo-escuro nav, body.modo-escuro footer { background: #111 !important; }
+  body.modo-escuro { background: #000!important; color: #ffffff!important; }
+  body.modo-escuro header, body.modo-escuro nav, body.modo-escuro footer { background: #111!important; }
   
-  /* TÍTULO VERDE */
-  body.modo-escuro h2 { color: #00ff88 !important; }
+  /* 1. TÍTULO VERDE */
+  body.modo-escuro h2 { color: #00ff88!important; }
   
-  /* TEXTO DE CIMA BRANCO - FORÇA MÁXIMA */
-  body.modo-escuro .card > p:first-of-type { color: #ffffff !important; opacity: 1 !important; }
+  /* 2. TEXTO DE CIMA BRANCO - FORÇA PRA PASSAR POR CIMA DO CSS ANTIGO */
+  body.modo-escuro.card p { color: #ffffff!important; opacity: 1!important; }
   
-  /* CAIXINHA BRANCA */
-  body.modo-escuro .card div[style*="background: white"],
-  body.modo-escuro .card div[style*="background:white"] { 
-    background: #ffffff !important; 
-    border-radius: 8px; 
-    padding: 15px; 
-  }
+  /* 3. CAIXINHA BRANCA */
+  body.modo-escuro.card > div[style] { background: #ffffff!important; border-radius: 8px; padding: 15px; }
   
-  /* LETRA PRETA DENTRO DA CAIXINHA */
-  body.modo-escuro .card div[style*="background: white"] *,
-  body.modo-escuro .card div[style*="background:white"] * { 
-    color: #000 !important; 
-  }
+  /* 4. LETRA PRETA DENTRO DA CAIXINHA */
+  body.modo-escuro.card > div[style] * { color: #000!important; }
 </style>
 <button id="btnModoEscuro">🌙</button>
 <script>
   const btn = document.getElementById('btnModoEscuro');
   if(localStorage.getItem('modo') === 'escuro') { document.body.classList.add('modo-escuro'); btn.textContent = '☀️'; }
-  btn.onclick = () => { document.body.classList.toggle('modo-escuro'); localStorage.setItem('modo', document.body.classList.contains('modo-escuro') ? 'escuro' : 'claro'); btn.textContent = document.body.classList.contains('modo-escuro') ? '☀️' : '🌙'; };
+  btn.onclick = () => { document.body.classList.toggle('modo-escuro'); localStorage.setItem('modo', document.body.classList.contains('modo-escuro')? 'escuro' : 'claro'); btn.textContent = document.body.classList.contains('modo-escuro')? '☀️' : '🌙'; };
 </script>
 </head>
 <body>
