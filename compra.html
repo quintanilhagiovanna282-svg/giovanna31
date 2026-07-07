@@ -73,7 +73,7 @@
       font-weight: bold;
     }
   </style>
- <style>
+<style>
   header { position: relative; }
   #btnModoEscuro { position: absolute; top: 90px; right: 20px; background: #000; color: white; border: none; padding: 6px 10px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 999; }
   
@@ -84,8 +84,8 @@
   /* TÍTULO VERDE */
   body.modo-escuro h2 { color: #00ff88 !important; }
   
-  /* TEXTO DE CIMA BRANCO */
-  body.modo-escuro .card > p { color: #ffffff !important; }
+  /* TEXTO DE CIMA BRANCO - FORÇA MÁXIMA */
+  body.modo-escuro .card > p:first-of-type { color: #ffffff !important; opacity: 1 !important; }
   
   /* CAIXINHA BRANCA */
   body.modo-escuro .card div[style*="background: white"],
@@ -95,7 +95,7 @@
     padding: 15px; 
   }
   
-  /* LETRA PRETA DENTRO DA CAIXINHA - AGORA COM !important FORTE */
+  /* LETRA PRETA DENTRO DA CAIXINHA */
   body.modo-escuro .card div[style*="background: white"] *,
   body.modo-escuro .card div[style*="background:white"] * { 
     color: #000 !important; 
