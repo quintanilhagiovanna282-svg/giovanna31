@@ -80,14 +80,14 @@
   body.modo-escuro { background: #000 !important; color: #ffffff !important; }
   body.modo-escuro header, body.modo-escuro nav, body.modo-escuro footer { background: #111 !important; }
   body.modo-escuro .card { background: #000 !important; color: #ffffff !important; border: 1px solid #333; }
-  body.modo-escuro h1, body.modo-escuro h2, body.modo-escuro h3, body.modo-escuro p { color: #ffffff !important; }
+  body.modo-escuro h1, body.modo-escuro h2, body.modo-escuro h3 { color: #ffffff !important; }
   
-  /* ISSO AQUI QUE FORÇA A LETRA PRETA NA CAIXINHA */
-  body.modo-escuro .card div[style*="background: white"], 
-  body.modo-escuro .card div[style*="background: white"] * { 
-    background: #ffffff !important; 
-    color: #000 !important; 
-  }
+  /* Caixinha branca */
+  body.modo-escuro .card div[style*="background: white"] { background: #ffffff !important; border-radius: 8px; padding: 15px; }
+  
+  /* Força letra preta em TUDO que estiver dentro da caixinha */
+  body.modo-escuro .card div[style*="background: white"] p,
+  body.modo-escuro .card div[style*="background: white"] span { color: #000 !important; }
 </style>
 <button id="btnModoEscuro">🌙</button>
 <script>
